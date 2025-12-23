@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: petclinic
+  namespace: petclinic
 spec:
   replicas: 2
   selector:
@@ -16,4 +17,4 @@ spec:
       - name: petclinic
         image: adityasharmaducat007/petclinic:latest
         ports:
-        - containerPort: 8082
+        - containerPort: 8080
